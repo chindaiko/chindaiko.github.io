@@ -1,0 +1,69 @@
+.carousel{
+    /* display: block; */
+    height: 50vh;
+}
+
+img{
+    height:inherit;
+}
+
+.home-carousel{
+    height: 50vh;
+    width: 100vw;
+    overflow-y: hidden;
+}
+
+.carousel-img-bg{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: blur(5px);
+    z-index: 1;
+}
+
+.carousel-img-fg{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0%;
+    object-fit:contain;
+    z-index: 2;
+}
+
+.carousel-title{
+    display: block;
+    height: 20vh;
+    position: relative;
+    top: -20vh;
+    z-index: 3;
+    padding-left: 4vw;;
+    font-size: 2rem;
+    font-weight: 600;
+    color: white;
+
+    background: linear-gradient(0deg, black, transparent);
+}
+
+.slider-button-row{
+    width: 100%;
+    height: 5vh;
+    
+    position: relative;
+    top: -27.5vh;
+
+    display: flex;
+    justify-content: space-between;
+}
+
+.prevslide{
+    display: block;
+    height: 100%;
+    width: 40px;
+    text-shadow: 1px 1px 5px white;
+    background-color: transparent;
+    color: black;
+}
+
+.slider-button-row svg{
+    filter: drop-shadow(0 0 5px white);
+}

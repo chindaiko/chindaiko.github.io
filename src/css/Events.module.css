@@ -1,0 +1,27 @@
+.cent{
+    /* width: 30vh; */
+    width: 20vh;
+    margin: auto;
+}
+
+.calendar-container{
+    display: grid;
+    width: 50vw;
+    height: 50vh;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+}
+
+.cell{
+    background-color: gray;
+    height: 70px;
+    width: 70px;
+    margin: 2px;
+}
+
+.cell.inactive{
+
+}
+
+.cell.event{
+    
+}

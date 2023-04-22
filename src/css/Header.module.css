@@ -1,0 +1,93 @@
+
+.header{
+    box-sizing: border-box;
+    height: 50px;
+    width: 100%;
+    padding: 0.5rem;
+    position: sticky;
+    top: 0px;
+    z-index: 4;
+}
+
+.title{
+    display: inline-block;
+    font-size: 1.5rem;
+    font-weight: bolder;
+}
+
+.title a{
+    text-decoration: none;
+    color: black;
+}
+
+#navbtn{
+    display: none;
+}
+
+.hidden{
+    display: none;
+}
+
+nav{
+    display: inline-block;
+    height: 100%;
+
+    vertical-align: text-bottom;
+}
+
+nav a{
+    padding: 0.5rem ;
+    text-decoration: none;
+    color: #555555;
+    display: inline-block;
+    font-size: 1rem;
+}
+
+#navbutton{
+    /* display: none; */
+    height: 100%;
+    width: auto;
+    background-color: white;
+    padding: 0;
+    border: 0;
+    float: right;
+}
+
+#navbutton svg{
+    height: 100%;
+    width: 100%;
+}
+
+@media screen and (max-width: 600px){
+    
+
+    #navbutton{
+        display: block;
+    }
+
+    nav{
+        position: absolute;
+        display: block;
+        width: 0px;
+        background-color: darkgray;
+        
+        height: 300px;
+        transition: width 0.3s ease-in;
+        overflow-y: hidden;
+        top: 50px;
+        right: 0px;
+    }
+
+    nav.show{
+        width: 30%;
+        
+    }
+
+    nav a{
+        display: block;
+        color: black;
+        height: auto;
+        width: 100%;
+        /* transition: width 0.3s ease-in; */
+    }
+}

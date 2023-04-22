@@ -1,0 +1,78 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "title": "events",
+    "description": "event object",
+    "type":"object",
+    "properties": {
+        "id": {
+            "type": "string",
+            "format": "uuid"
+        },
+        "title": {
+            "type": "string"
+        },
+        "time": {
+            "type": "object",
+            "properties": {
+                "start": {
+                    "type": "string",
+                    "anyOf": [
+                        {
+                            "format": "date-time"
+                        },
+                        {
+                            "format": "date"
+                        }
+                    ]
+                },
+                "end": {
+                    "type": ["string", "null"],
+                    "anyOf": [
+                        {
+                            "format": "date-time"
+                        },
+                        {
+                            "format": "date"
+                        }
+                    ]
+                }
+            },
+            "required": ["start", "end"]
+        },
+        "location": {
+            "type": "object",
+            "properties": {
+                "address": {
+                    "type": ["string", "null"]
+                },
+                "mapLink": {
+                    "type": ["string", "null"]
+                },
+                "parking": {
+                    "type": ["string", "null"]
+                },
+                "parkingMapLink": {
+                    "type": ["string", "null"]
+                }
+            },
+            "required": ["address", "mapLink", "parking", "parkingMapLink"]
+        },
+        "ticketed": {
+            "type": "boolean"
+        },
+        "public": {
+            "type": "boolean"
+        },
+        "link": {
+            "type": ["string", "null"]
+        },
+        "deleted": {
+            "type": "boolean"
+        },
+        "last_edited_time": {
+            "type": "string",
+            "format": "date-time"
+        }
+    },
+    "required": ["id", "title", "time", "location", "ticketed", "public", "link", "deleted", "last_edited_time"]
+}
